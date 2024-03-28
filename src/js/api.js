@@ -15,10 +15,26 @@ const cuentas = {
 
 const categorias = {
   lista: '/categorias',
-  detalle: (data) => utils.replaceParams('/categorias/:id', data),
+  detalle: (data) => utils.replaceParams('/categorias/idCategoria', data),
   guardar: '/categorias',
-  editar: (data) => utils.replaceParams('/categorias/:id', data),
-  eliminar: (data) => utils.replaceParams('/categorias/:id', data),
+  editar: (data) => utils.replaceParams('/categorias/idCategoria', data),
+  eliminar: (data) => utils.replaceParams('/categorias/idCategoria', data),
+};
+
+const proveedores = {
+  lista: '/proveedores',
+  detalle: (data) => utils.replaceParams('/proveedores/:idProveedor', data),
+  guardar: '/proveedores',
+  editar: (data) => utils.replaceParams('/proveedores/:idProveedor', data),
+  eliminar: (data) => utils.replaceParams('/proveedores/:idProveedor', data),
+};
+
+const clientes = {
+  lista: '/clientes',
+  detalle: (data) => utils.replaceParams('/clientes/:idCliente', data),
+  guardar: '/clientes',
+  editar: (data) => utils.replaceParams('/clientes/:idCliente', data),
+  eliminar: (data) => utils.replaceParams('/clientes/:idCliente', data),
 };
 
 export default {
@@ -26,4 +42,6 @@ export default {
   usuarios,
   cuentas,
   categorias,
+  proveedores,
+  clientes,
 };
