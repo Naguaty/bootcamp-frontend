@@ -1,7 +1,7 @@
 
-node_modules
+
 .DS_Store
 dist
 coverage
 .vscode/settings.json
-/node_modules
+
