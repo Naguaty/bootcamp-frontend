@@ -10,8 +10,6 @@ import api from './api';
 
 import Inicio from './pages/inicio';
 import Cuentas from './pages/cuentas';
-import Categorias from './pages/categorias';
-import Usuarios from './pages/usuarios';
 
 class Upnify {
   constructor() {
@@ -96,12 +94,9 @@ class Upnify {
     '/inicio': Inicio.init,
     '/cuentas/:id/:cuenta': Cuentas.detalle,
     '/cuentas': Cuentas.init,
-    '/categorias': Categorias.init,
-    '/usuarios': Usuarios.init,
   };
 
   setRoutes = () => {
-    // console.log('setRoutes', this.routes);
     this.router = new Navigo('/', { hash: true });
     this.router.on(this.routes);
     this.router.notFound(() => {
