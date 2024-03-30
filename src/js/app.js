@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import Navigo from 'navigo';
 
 import utils from './utils';
@@ -28,6 +29,14 @@ class Upnify {
 
     const $btnLogin = document.querySelector('#btn-login');
     $btnLogin.onclick = this.doLogin;
+
+    const $mostraContrasenia = document.querySelector('#mostraContrasenia');
+    $mostraContrasenia.onclick = this.mostraContrasenia;
+  };
+
+  mostraContrasenia = () => {
+    const $floatingPassword = document.querySelector('#floatingPassword');
+    $floatingPassword.type = $floatingPassword.type === 'password' ? 'text' : 'password';
   };
 
   doLogin = async () => {
