@@ -2,7 +2,7 @@ import storage from './storage';
 import utils from './utils';
 
 const getServer = (url) => {
-  const api = 'http://35.92.50.147:3000';
+  const api = 'http://bootcamp.salesup.com:4432';
   if (url.includes('http')) { return url; }
 
   return api + url;
@@ -36,7 +36,7 @@ const doHttp = async (opts) => {
 
   if (includeSesion) {
     const token = storage.get('token');
-    options.headers.token = token;
+    options.headers.authorization = `Bearer ${token}`;
   }
 
   // eslint-disable-next-line no-async-promise-executor
