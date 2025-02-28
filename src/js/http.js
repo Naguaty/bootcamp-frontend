@@ -36,7 +36,7 @@ const doHttp = async (opts) => {
 
   if (includeSesion) {
     const token = storage.get('token');
-    options.headers.token = token;
+    options.headers.authorization = `Bearer ${token}`;
   }
 
   // eslint-disable-next-line no-async-promise-executor
